@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Usuarios
+{% endblock %}
+
+{% block body %}
+Año {{ current_year }} {{ today }}
+    <ul>
+        {% for usuario in usuarios %}
+            <li>{{usuario.name.first}} {{usuario.name.last}} {{usuario.gender}}  </li> 
+        {% endfor %}
+    </ul>
+{% endblock %}
+
+
+<!-- TAREA: ARMAR UNA TABLA CON TODOS LOS DATOS -->

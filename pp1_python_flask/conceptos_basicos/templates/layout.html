@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}    
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+</head>
+<body>
+    <nav class="navbar navbar-expand navbar-light bg-light">
+        <div class="nav navbar-nav">
+            <a class="nav-item nav-link active" href="/">Inicio <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="/about">Acerca De</a>
+            <a class="nav-item nav-link" href="/users">Usuarios</a>
+        </div>
+    </nav>  
+    {% block body %}
+    {% endblock %}
+    <script src="{{ url_for('static', filename='js/layout.js') }}"></script>
+</body>
+</html>
